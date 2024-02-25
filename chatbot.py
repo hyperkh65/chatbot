@@ -41,7 +41,7 @@ def main():
         process = st.button("Process")
     if process:
         if not openai_api_key:
-            st.info("Please add your OpenAI API key to continue.")
+            st.info("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")
             st.stop()
         files_text = get_text(uploaded_files)
         text_chunks = get_text_chunks(files_text)
@@ -137,7 +137,7 @@ def get_vectorstore(text_chunks):
     return vectordb
 
 def get_conversation_chain(vetorestore,openai_api_key):
-    llm = ChatOpenAI(openai_api_key=openai_api_key, model_name = 'gpt-3.5-turbo',temperature=0)
+    llm = ChatOpenAI(openai_api_key='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', model_name = 'gpt-3.5-turbo',temperature=0)
     conversation_chain = ConversationalRetrievalChain.from_llm(
             llm=llm, 
             chain_type="stuff", 
