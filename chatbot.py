@@ -41,7 +41,7 @@ def main():
         process = st.button("Process")
     if process:
         if not openai_api_key:
-            st.info("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")
+            st.info("OPENAI API KEY를 입력하세요")
             st.stop()
         files_text = get_text(uploaded_files)
         text_chunks = get_text_chunks(files_text)
