@@ -25,7 +25,7 @@ def main():
         page_title="DirChat",
         page_icon=":books:")
 
-    st.title("_Assistant :red[AI Bot]_ :books:")
+    st.title("_YNK :red[AI Bot]_ :books:")
 
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
@@ -138,7 +138,7 @@ def get_vectorstore(text_chunks):
 
 
 def get_conversation_chain(vetorestore, openai_api_key):
-    llm = ChatOpenAI(openai_api_key=openai_api_key, model_name='gpt-3.5-turbo', temperature=0)
+    llm = ChatOpenAI(openai_api_key="skJC0jmr7GEzhAaCOZeZDNT3BlbkFJlNCFZcnNHfiU5xLcPEJE", model_name='gpt-3.5-turbo', temperature=0)
     conversation_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         chain_type="stuff",
